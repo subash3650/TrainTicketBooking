@@ -20,7 +20,6 @@ import {setCurrentUser, logoutUser} from './actions/authActions';
 
 const rootReducer = combineReducers({auth: authReducer});
 const store = createStore(rootReducer, applyMiddleware(logger, thunk));
-print("hello")
 if (localStorage.jwtToken) {
   // Set auth token header auth
   const token = localStorage.jwtToken;
